@@ -1,3 +1,79 @@
-Whatcha doin' here?
-<a href="https://boldyrevda.github.io/survival-shooter"><button>Играть</button></a>
-<a href="https://boldyrevda.github.io/TextEditor"><button>Писать</button></a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyPage5</title>
+    <!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <style>
+        body {
+            background-color: #001;
+        }
+
+        #treecanvas {
+            top: 100px;
+            float: right;
+            width: 530px;
+            position: relative;
+            z-index: -2;
+        }
+
+        #snow {
+            z-index: -1;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+
+        }
+        
+        .content {
+            color: #ddd;
+	        margin: 30px 50px;
+            border: 3px outset #811;
+            display: inline-block;
+            padding: 20px;
+            background: rgba(15, 15, 35, .7);
+        }
+        
+
+        a.newBtn {
+            display: inline-block;
+            color: #eee;
+            font-weight: 600;
+            text-decoration: none;
+            user-select: none;
+            padding: .4em 2em;
+            outline: none;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            transition: 0.2s;
+            margin: 5px;
+        }
+
+        a.newBtn:hover {
+            background: rgba(255, 255, 255, .2);
+        }
+
+        a.newBtn:active {
+            background: #ccc;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>What do you want?</h1>
+
+        <a href="https://boldyrevda.github.io/survival-shooter" class="newBtn">Играть</a>
+        <a href="https://boldyrevda.github.io/TextEditor" class="newBtn">Писать</a>
+    </div>
+    <canvas id="snow"></canvas>
+    <canvas id="treecanvas"></canvas>
+
+    <script src="js/newysnow.js"></script>
+    <script src="js/christmas_tree.js"></script>
+</body>
+
+</html>
