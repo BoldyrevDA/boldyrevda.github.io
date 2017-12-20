@@ -9,14 +9,14 @@ if (typeof requestAnimationFrame != 'function') {
 (function (canvas) {
     /* Settings */
     var thetaEnd = 6 * Math.PI,
-        lineSpacing = 1 / 20,
+        lineSpacing = 1 / 25,
         lineLength = 0.6 * lineSpacing,
         rate = 1 / (2 * Math.PI),
         factor = rate / 3,
         cycle = 200,
         scene = [],
         /* Rendering */
-        offsetX = 250,
+        offsetX = 340,
         offsetY = 300,
         scaleX = 400,
         scaleY = 400,
@@ -26,7 +26,7 @@ if (typeof requestAnimationFrame != 'function') {
         cSize = 500,
         c = document.getElementById('treecanvas').getContext('2d');
     canvas.width = canvas.height = cSize;
-    c.lineWidth = 2.0;
+    c.lineWidth = 2.1;
     scene.push(new Coil({
         color: '255,0,0',
         theta0: Math.PI
