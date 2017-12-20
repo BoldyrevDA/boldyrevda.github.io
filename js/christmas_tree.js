@@ -9,8 +9,8 @@ if (typeof requestAnimationFrame != 'function') {
 (function (canvas) {
     /* Settings */
     var thetaEnd = 6 * Math.PI,
-        lineSpacing = 1 / 30,
-        lineLength = 0.5 * lineSpacing,
+        lineSpacing = 1 / 20,
+        lineLength = 0.6 * lineSpacing,
         rate = 1 / (2 * Math.PI),
         factor = rate / 3,
         cycle = 200,
@@ -24,9 +24,9 @@ if (typeof requestAnimationFrame != 'function') {
         camY = 2,
         camZ = -Math.PI,
         cSize = 500,
-        c = document.getElementById('treecanvas').getContext('2d')
-    canvas.width = canvas.height = cSize
-    c.lineWidth = 1.44
+        c = document.getElementById('treecanvas').getContext('2d');
+    canvas.width = canvas.height = cSize;
+    c.lineWidth = 2.0;
     scene.push(new Coil({
         color: '255,0,0',
         theta0: Math.PI
@@ -39,7 +39,7 @@ if (typeof requestAnimationFrame != 'function') {
         color: '200,255,100',
         theta0: -Math.PI / 3
     }))
-    requestAnimationFrame(paint)
+    requestAnimationFrame(paint);
 
     function paint() {
         var offset = 1 - Date.now() / cycle % 1,
